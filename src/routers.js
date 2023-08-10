@@ -2,6 +2,7 @@ import HomePage from '../src/components/HomePage.vue';
 import LoginPage from '../src/components/LoginPage.vue';
 import SingUpPage from '../src/components/SingUpPage.vue';
 import AddNewBookPage from '../src/components/AddNewBookPage.vue';
+import UpdateBookPage from '../src/components/UpdateBookPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
 
 const routes = [
@@ -25,6 +26,11 @@ const routes = [
     component: AddNewBookPage,
     path:'/add-new-book'
   },
+  {
+    name:'UpdateBookPage',
+    component: UpdateBookPage,
+    path:'/update-books/:id'
+  }
 ];
 
 const router = createRouter({
