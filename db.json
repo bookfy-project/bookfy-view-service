@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Amy",
+      "email": "amy@email.com",
+      "password": "amy123"
+    },
+    {
+      "name": "vim",
+      "email": "vim@gmail.com",
+      "password": "vim123",
+      "id": 2
+    },
+    {
+      "name": "maria",
+      "email": "maria@email.com",
+      "password": "maria123",
+      "id": 3
+    },
+    {
+      "name": "carol",
+      "email": "carol@email.com",
+      "password": "carol123",
+      "id": 4
+    }
+  ]
+}
