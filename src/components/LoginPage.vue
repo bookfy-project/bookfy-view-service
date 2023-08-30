@@ -9,7 +9,7 @@
     <label>Password</label>
     <input type="password" v-model="password" placeholder="Enter your password">
 
-    <button v-on:click="login" >Login</button>
+    <button @click="login" >Login</button>
 
     <p>
       <router-link to="/sing-up" >Sing Up</router-link>
@@ -37,7 +37,7 @@ export default {
 
       if (result.status == 200 && result.data.length > 0) {
         localStorage.setItem("user-info", JSON.stringify(result.data[0]));
-        router.push({ name: "Home"});
+        router.push({ name: "HomePage"});
       }
     }
 
