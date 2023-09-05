@@ -18,14 +18,14 @@
     <label>Publication Date</label>
     <input type="text" name="publicationDate" v-model="book.publicationDate" />
 
-    <button v-on:click="updateBook" >Update</button>
+    <button @click="updateBook" >Update</button>
   </form>
 </template>
 
 <script>
 import axios from "axios";
 import { ref, onMounted } from "vue";
-import { useRouter } from "vue-router";
+import { useRouter, useRoute } from "vue-router";
 import NavBar from "./NavBar.vue";
 
 export default {
@@ -37,8 +37,10 @@ export default {
 
   setup() {
     const router = useRouter();
+    const route = useRoute();
     const name = ref('');
     const book = ref({
+      id: '',
       registrationNumber: '',
       title: '',
       subject: '',
@@ -47,30 +49,43 @@ export default {
     });
 
     async function updateBook() {
-      const result = await axios.put("http://localhost:3000/books/" + router.params.id, {
-        id: book.value.id,
-        registrationNumber: book.value.registrationNumber,
-        title: book.value.title,
-        subject: book.value.subject,
-        author: book.value.author,
-        publicationDate: book.value.publicationDate,
-      });
+      const result = await axios.put(
+        "http://localhost:3000/books/" + route.params.id,
+        {
+          id: book.value.id,
+          registrationNumber: book.value.registrationNumber,
+          title: book.value.title,
+          subject: book.value.subject,
+          author: book.value.author,
+          publicationDate: book.value.publicationDate,
+        }
+      );
 
+      // TODO fix redirect to home page
       if(result.status == 200) {
-        router.push({ name: 'Home' });
+        router.push({ name: 'HomePage' });
       }
     }
 
+    const fetchData = () => {
+      axios.get("http://localhost:3000/books/" + router.currentRoute.value.params.id)
+        .then((result) => {
+          book.value = result.data;
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
+
     onMounted(() => {
-      let user = localStorage.getItem("user-info");
+      const user = localStorage.getItem("user-info");
       name.value = JSON.parse(user).name;
 
       if (!user) {
         router.push({ name: 'SingUp' });
       }
 
-      const result = async () => { await axios.get('http://localhost:3000/books/' + router.params.id)};
-      book.value = result.data;
+      fetchData();
     });
 
     return {
