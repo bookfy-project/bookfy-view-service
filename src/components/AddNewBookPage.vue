@@ -56,7 +56,7 @@ export default {
       });
 
       if (result.status == 200) {
-        router.push({ name: 'Home' });
+        router.push({ name: 'HomePage' });
       }
     }
 

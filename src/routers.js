@@ -1,9 +1,9 @@
-import HomePage from '../src/components/HomePage.vue';
-import LoginPage from '../src/components/LoginPage.vue';
-import SingUpPage from '../src/components/SingUpPage.vue';
-import AddNewBookPage from '../src/components/AddNewBookPage.vue';
-import UpdateBookPage from '../src/components/UpdateBookPage.vue';
 import { createRouter, createWebHistory } from 'vue-router';
+import AddNewBookPage from './components/AddNewBookPage.vue';
+import HomePage from './components/HomePage.vue';
+import LoginPage from './components/LoginPage.vue';
+import SingUpPage from './components/SingUpPage.vue';
+import UpdateBookPage from './components/UpdateBookPage.vue';
 
 const routes = [
   {

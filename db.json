@@ -24,5 +24,103 @@
       "password": "carol123",
       "id": 4
     }
+  ],
+  "books": [
+    {
+      "id": 3,
+      "registrationNumber": "1239810677",
+      "title": "Clean Code",
+      "subject": "Software Engineering",
+      "author": "Robert C. Martin",
+      "publicationDate": "2009"
+    },
+    {
+      "id": 4,
+      "registrationNumber": "4211879",
+      "title": "Romeu e Julieta",
+      "subject": "Romance",
+      "author": "William Shakespeare",
+      "publicationDate": "1597"
+    },
+    {
+      "registrationNumber": "67643532",
+      "title": "Como Eu Era Antes de Você",
+      "subject": "romance",
+      "author": "Jojo Moyes",
+      "publicationDate": "1012",
+      "id": 6
+    },
+    {
+      "registrationNumber": "5532",
+      "title": "Ainda sou eu",
+      "subject": "Romance",
+      "author": "Jojo Moyes",
+      "publicationDate": "2018",
+      "id": 9
+    },
+    {
+      "id": 10,
+      "registrationNumber": "2323234234324",
+      "title": "A menina que comia livros",
+      "subject": "Uma menina que comia livros",
+      "author": "A menina",
+      "publicationDate": "2001"
+    },
+    {
+      "registrationNumber": "55555",
+      "title": "any",
+      "subject": "tudo",
+      "author": "eu",
+      "publicationDate": "00/00/0000",
+      "id": 11
+    },
+    {
+      "registrationNumber": "223330000",
+      "title": "kjbjkb kj",
+      "subject": "lml",
+      "author": "ççm bhoihoi lçml",
+      "publicationDate": "01/01/2001",
+      "id": 12
+    },
+    {
+      "registrationNumber": "78890898",
+      "title": "jjn",
+      "subject": "ijiojij",
+      "author": "fewfewf",
+      "publicationDate": "30/12/1997",
+      "id": 13
+    },
+    {
+      "registrationNumber": "2121",
+      "title": "dwqd",
+      "subject": "dwqd",
+      "author": "wqdwq",
+      "publicationDate": "05/09/2023",
+      "id": 14
+    },
+    {
+      "registrationNumber": "ebteer",
+      "title": "rrgre",
+      "subject": "rgegre",
+      "author": "egrg",
+      "publicationDate": "01/01/2001",
+      "id": 15
+    },
+    {
+      "registrationNumber": "sevr",
+      "title": "wqwqd",
+      "subject": "wdw",
+      "author": "wdwq",
+      "publicationDate": "01/01/2001",
+      "id": 16
+    },
+    {
+      "registrationNumber": "sax",
+      "title": "sxasx",
+      "subject": "asxasxsa",
+      "author": "xasxsaxas",
+      "publicationDate": "2018",
+      "id": 17
+    }
   ]
 }
